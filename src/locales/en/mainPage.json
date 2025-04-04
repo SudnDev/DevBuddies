@@ -3,11 +3,11 @@
   "button": "Get in Touch!",
   "services-title": "Our Services",
   "service-1-title": "Web Development",
-  "service-1-description": "Modern, responsive websites built with the latest technologies",
-  "service-2-title": "",
-  "service-2-description": "",
-  "service-3-title": "",
-  "service-3-description": "",
-  "service-4-title": "",
-  "service-4-description": ""
+  "service-1-description": "Creating responsive websites with a focus on functionality: interface development, integrations, and optimization for various devices.",
+  "service-2-title": "Minecraft Plugins",
+  "service-2-description": "Creating custom plugins for Minecraft servers (Spigot, Paper) for any task: economy, quests, mechanics, and much more.",
+  "service-3-title": "Discord Bots",
+  "service-3-description": "Developing Discord bots for any task: automation, community management, integrations, and much more.",
+  "service-4-title": "Project Management",
+  "service-4-description": "Full project development support: assistance with hosting, environment setup, cost consultations, and turnkey project launch."
 }
