@@ -4,8 +4,10 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 
 import enMainPage from "../locales/en/mainPage.json";
+import enFooter from "../locales/en/footer.json";
 
 import ruMainPage from "../locales/ru/mainPage.json";
+import ruFooter from "../locales/ru/footer.json";
 
 i18n
     .use(LanguageDetector) // Автоопределение языка
@@ -14,9 +16,11 @@ i18n
         resources: {
             en: {
                 mainPage: enMainPage,
+                footer: enFooter,
             },
             ru: {
                 mainPage: ruMainPage,
+                footer: ruFooter,
             },
         },
         fallbackLng: "en", // Язык по умолчанию

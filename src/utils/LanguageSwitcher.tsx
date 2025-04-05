@@ -24,7 +24,7 @@ const LanguageSwitcher = () => {
     return (
         <button
             onClick={() => changeLanguage(language === 'en' ? 'ru' : 'en')}
-            className={`flex items-center gap-2 ${theme === "dark" ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all`}
+            className={`flex items-center gap-2 ${theme === "dark" ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer`}
         >
             <Globe className="w-4 h-4" />
             <span>{language === 'en' ? 'RU' : 'EN'}</span>
