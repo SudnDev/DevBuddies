@@ -77,25 +77,25 @@ const MainPage = () => {
                     <h2 className={`text-3xl font-bold text-center mb-16 ${isDark ? 'text-white' : 'text-gray-900'}`}>{t("work-title")}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8 w-full justify-center items-center">
                         <ProjectCard
-                            image="/projects/republic.png"
+                            image="./projects/republic.png"
                             title={t("work-item1-title")}
                             description={t("work-item1-description")}
                             isDark={isDark}
                         />
                         <ProjectCard
-                            image="/projects/ss14.png"
+                            image="./projects/ss14.png"
                             title={t("work-item2-title")}
                             description={t("work-item2-description")}
                             isDark={isDark}
                         />
                         <ProjectCard
-                            image="/projects/craftnet.png"
+                            image="./projects/craftnet.png"
                             title={t("work-item3-title")}
                             description={t("work-item3-description")}
                             isDark={isDark}
                         />
                         <ProjectCard
-                            image="/projects/univer.png"
+                            image="./projects/univer.png"
                             title={t("work-item4-title")}
                             description={t("work-item4-description")}
                             isDark={isDark}
@@ -114,7 +114,7 @@ const MainPage = () => {
                             role={t("review-1-role")}
                             content={t("review-1-content")}
                             rating={5}
-                            image={"/reviews/sacred.png"}
+                            image={"./reviews/sacred.png"}
                             isDark={isDark}
                         />
                         <ReviewCard
@@ -122,7 +122,7 @@ const MainPage = () => {
                             role={t("review-2-role")}
                             content={t("review-2-content")}
                             rating={5}
-                            image={"/reviews/trillp.jpg"}
+                            image={"./reviews/trillp.jpg"}
                             isDark={isDark}
                         />
                         <ReviewCard
@@ -130,7 +130,7 @@ const MainPage = () => {
                             role={t("review-3-role")}
                             content={t("review-3-content")}
                             rating={5}
-                            image={"/reviews/onikot.jpg"}
+                            image={"./reviews/onikot.jpg"}
                             isDark={isDark}
                         />
                     </div>
