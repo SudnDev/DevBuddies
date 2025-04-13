@@ -1,6 +1,6 @@
 {
   "name": "dev-buddies-site",
-  "homepage": "https://sudndev.github.io/DevBuddies",
+  "homepage": "devbuddies.it.com",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -19,6 +19,8 @@
     "lucide-react": "^0.485.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-i18next": "^15.4.1",
     "react-router-dom": "^7.4.1",
     "use-local-storage": "^3.0.0"
