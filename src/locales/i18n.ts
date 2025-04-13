@@ -9,6 +9,9 @@ import enFooter from "../locales/en/footer.json";
 import ruMainPage from "../locales/ru/mainPage.json";
 import ruFooter from "../locales/ru/footer.json";
 
+import kzMainPage from "../locales/kz/mainPage.json";
+import kzFooter from "../locales/kz/footer.json";
+
 i18n
     .use(LanguageDetector) // Автоопределение языка
     .use(initReactI18next) // Подключение к React
@@ -21,6 +24,10 @@ i18n
             ru: {
                 mainPage: ruMainPage,
                 footer: ruFooter,
+            },
+            kz: {
+                mainPage: kzMainPage,
+                footer: kzFooter,
             },
         },
         fallbackLng: "en", // Язык по умолчанию

@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import * as React from "react";
-import {useTheme} from "../contexts/ThemeContext.tsx";
-import {Star} from "lucide-react";
-import Footer from "../utils/Footer"
+import { useTheme } from "../contexts/ThemeContext";
+import { Star } from "lucide-react";
+import Footer from "../utils/Footer";
+import LanguageSelector from "../components/LanguageSelector";
 
 const MainPage = () => {
     const { t } = useTranslation("mainPage");
@@ -11,8 +12,12 @@ const MainPage = () => {
 
     return (
         <div className={`min-h-screen ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} transition-colors duration-300`}>
-            {/* Hero Section */}
-            <header className={`min-h-screen flex items-center justify-center ${isDark ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-gray-50 to-gray-100'}`}>
+
+            <header className={`min-h-screen flex flex-col items-center justify-center relative ${isDark ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-gray-50 to-gray-100'}`}>
+
+                <div className="absolute top-4 right-4">
+                    <LanguageSelector />
+                </div>
                 <div className="max-w-6xl mx-auto px-4 py-16 text-center">
                     <h1 className={`text-6xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>DevBuddies</h1>
                     <p className={`text-xl mb-12 max-w-2xl mx-auto ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -23,16 +28,15 @@ const MainPage = () => {
                             const footer = document.getElementById('footer');
                             if (footer) {
                                 footer.scrollIntoView({ behavior: 'smooth' });
-
                                 footer.classList.add('highlight-footer');
-
-                                // Удалим подсветку через 1.5 секунды
+                                // Удаляем подсветку через 1.5 секунды
                                 setTimeout(() => {
                                     footer.classList.remove('highlight-footer');
                                 }, 1500);
                             }
                         }}
-                        className={`${isDark ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'} px-8 py-3 rounded-full transition-colors cursor-pointer`}>
+                        className={`${isDark ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'} px-8 py-3 rounded-full transition-colors cursor-pointer`}
+                    >
                         {t("button")}
                     </button>
                 </div>
@@ -41,7 +45,7 @@ const MainPage = () => {
             {/* Services Section */}
             <section className={`py-24 ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-16 ${isDark ? 'text-white text-shadow-dark' : 'text-gray-900 text-shadow-white'}">{t("services-title")}</h2>
+                    <h2 className={`text-3xl font-bold text-center mb-16 ${isDark ? 'text-white text-shadow-dark' : 'text-gray-900 text-shadow-white'}`}>{t("services-title")}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <ServiceCard
                             icon={<span>🌐</span>}
@@ -139,8 +143,8 @@ const MainPage = () => {
 
             <Footer />
         </div>
-    )
-}
+    );
+};
 
 function ServiceCard({ icon, title, description, isDark }: { icon: React.ReactNode; title: string; description: string; isDark: boolean }) {
     return (

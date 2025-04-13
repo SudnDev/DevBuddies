@@ -6,7 +6,7 @@ import i18n from "./locales/i18n.ts";
 import './index.css';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import { ThemeProvider } from './contexts/ThemeContext';
-import LanguageSwitcher from "./utils/LanguageSwitcher.tsx";
+import LanguageSelector from "./components/LanguageSelector.tsx";
 
 const MainPage = lazy(() => import("./pages/MainPage"));
 
@@ -16,7 +16,7 @@ function App() {
           <ThemeProvider>
               <div className="fixed top-4 right-4 z-50 flex gap-2">
                   <ThemeSwitcher />
-                  <LanguageSwitcher />
+                  <LanguageSelector />
               </div>
 
               <I18nextProvider i18n={i18n}>
